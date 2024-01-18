@@ -9,8 +9,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const data = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
-      to: ['zemus241@gmail.com', 'luciusunegbu@gmail.com'],
-      subject: 'Event estimate alert',
+      to: [
+        'zemus241@gmail.com',
+        'luciusunegbu@gmail.com',
+        'lovesangel95@gmail.com',
+      ],
+      subject: 'Event estimate alert testing',
       text: `A new user with email ID: ${email} just made a request for event estimate`,
     })
 
