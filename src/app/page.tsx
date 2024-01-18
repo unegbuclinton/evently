@@ -1,12 +1,14 @@
 'use client'
 import Button from '@/components/button/Button'
 import InputField from '@/components/inputField/InputField'
+import { notifySignup } from '@/lib/apiClient'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
 type Inputs = {
   budget: string
   email: string
   invitees: string
+  phone: number
 }
 
 export default function Home() {
@@ -17,7 +19,7 @@ export default function Home() {
     formState: { errors },
   } = useForm<Inputs>()
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data)
+    notifySignup(data)
   }
   return (
     <main className='flex h-screen'>
