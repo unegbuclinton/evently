@@ -16,12 +16,11 @@ module.exports = {
         tertiary: '#D7FCD4',
       },
       boxShadow: {
-        pillShadow:
-          '0px 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 1px 2px 0px rgba(0, 0, 0, 1), 0px 0px 1px 0px rgba(0, 0, 0, 0.12)',
+        xl: 'rgba(71, 69, 84, 0.08) 0px 0px 0px 1px, rgba(0, 0, 0, 0.12) 1px 12px 20px, rgba(0, 0, 0, 0.12) 0px 3px 3px, rgba(0, 0, 0, 0.15) 0px -1px 0px inset',
       },
       backgroundImage: {
         'primary-gradient':
-          'linear-gradient(144deg, #048BA8 84.41%, #D6FED3 29.03%)',
+          ' linear-gradient(128deg, rgba(255,179,193,1) 9%, rgba(219,198,203,1) 27%, rgba(252,252,252,1) 59%)',
       },
     },
   },

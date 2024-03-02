@@ -12,7 +12,7 @@ const Button: React.FC<buttonTypes> = ({
       onClick={onClick}
       type={type}
       disabled={disabled}
-      className='flex bg-black text-white w-full items-center justify-center text-sm p-4 rounded-2xl font-medium'
+      className='flex bg-black text-white w-full items-center justify-center text-sm p-2 lg:p-4 rounded-2xl font-medium'
     >
       {children}
     </button>
