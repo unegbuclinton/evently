@@ -17,5 +17,6 @@ export interface InputProps {
   onChange?: (x: any) => void
   register: UseFormRegister<any>
   containerStyles?: string
+  required?: boolean
   styles?: string
 }
