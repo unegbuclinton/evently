@@ -71,7 +71,9 @@ const InputField: React.FC<InputProps> = ({
           ></div>
         )}
       </div>
-      <p className='text-[red] pl-2'>{capitalizeFirstLetter(error)}</p>
+      <p className='text-[red] pl-2 text-left'>
+        {capitalizeFirstLetter(error)}
+      </p>
       {/* <ErrorMessage field={error} /> */}
     </div>
   )
