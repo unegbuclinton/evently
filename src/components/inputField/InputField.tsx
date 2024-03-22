@@ -54,7 +54,9 @@ const InputField: React.FC<InputProps> = ({
           disabled={disabled}
           onKeyDown={numberKeyPress}
           placeholder={placeholder}
-          className={`${styles}  border rounded-2xl outline-none focus:border-secondary duration-200 px-3 py-2 mt-1 text-base w-full`}
+          className={`${styles} ${
+            error ? 'border border-[red] border-solid' : ''
+          }  rounded-2xl outline-none focus:border-secondary duration-200 px-3 py-2 mt-1 text-base w-full`}
         />
         {type === 'password' && (
           <div
@@ -71,7 +73,7 @@ const InputField: React.FC<InputProps> = ({
           ></div>
         )}
       </div>
-      <p className='text-[red] pl-2 text-left'>
+      <p className='text-[red] pl-2 text-left text-xs mt-1'>
         {capitalizeFirstLetter(error)}
       </p>
       {/* <ErrorMessage field={error} /> */}

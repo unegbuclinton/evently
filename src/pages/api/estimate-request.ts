@@ -4,7 +4,7 @@ import { Resend } from 'resend'
 const resend = new Resend(process.env.NEXT_RESEND_API_KEY)
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const { email } = req.body
+  const { email, budget, invitees, phone } = req.body
 
   try {
     const data = await resend.emails.send({
@@ -14,8 +14,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         'luciusunegbu@gmail.com',
         'lovesangel95@gmail.com',
       ],
-      subject: 'Event estimate alert testing',
-      text: `A new user with email ID: ${email} just made a request for event estimate`,
+      subject: 'User event estimate notification',
+      text: `A new user with email ID: ${email} just made a request for event estimate, with a budget of ${budget} and No. of invitees totalling to ${invitees}. And their contact is ${phone}`,
     })
 
     res.status(200).json(data)
