@@ -17,8 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
-        <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+      {process.env.NEXT_GOOGLE_ANALYTICS ? (
+        <GoogleAnalytics ga_id={process.env.NEXT_GOOGLE_ANALYTICS} />
       ) : null}
       <body className={inter.className}>{children}</body>
     </html>
